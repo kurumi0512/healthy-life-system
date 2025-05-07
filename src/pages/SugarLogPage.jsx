@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SugarLogPage = () => {
+function SugarLogPage () {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">血糖紀錄</h1>

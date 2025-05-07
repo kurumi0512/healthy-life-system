@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../auth/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage = () => {
+function LoginPage () {
   const [username, setUsername] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();

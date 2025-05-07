@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext'; // ⬅️ 引入登入狀態
 
-const Navbar = () => {
+function Navbar () {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
