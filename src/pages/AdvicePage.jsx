@@ -9,7 +9,7 @@ function AdvicePage() {
     return (
       <div>
         <h2>健康建議</h2>
-        <p>BMI：{advice.bmi}</p>
+        <p class="text-blue-600/100 dark:text-sky-400/100">BMI：{advice.bmi}</p>
         <p>年齡層：{advice.ageGroup}</p>
         <p>建議：{advice.healthAdvice}</p>
         <p>運動建議：{advice.exerciseAdvice}</p>
