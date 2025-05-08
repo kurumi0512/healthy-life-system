@@ -17,47 +17,47 @@ function Navbar () {
   };
 
   return (
-    <nav className="bg-white shadow p-4 flex gap-4 items-center justify-between">
-      <div className="flex gap-4">
-        <NavLink to="/" className={navItemStyle}>
-          首頁
-        </NavLink>
-        <NavLink to="/profile" className={navItemStyle}>
-          使用者設定
-        </NavLink>
-        <NavLink to="/weight" className={navItemStyle}>
-          體重紀錄
-        </NavLink>
-        <NavLink to="/blood-pressure" className={navItemStyle}>
-          血壓紀錄
-        </NavLink>
-        <NavLink to="/blood-sugar" className={navItemStyle}>
-          血糖紀錄
-        </NavLink>
-        <NavLink to="/advice" className={navItemStyle}>
-          健康建議
-        </NavLink>
-      </div>
+    <nav className="bg-white shadow p-4">
+  <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    {/* 導覽列置中排列 + 間距 */}
+    <div className="flex flex-wrap justify-center gap-6">
+      <NavLink to="/" className={navItemStyle}>
+        首頁
+      </NavLink>
+      <NavLink to="/weight" className={navItemStyle}>
+        體重紀錄
+      </NavLink>
+      <NavLink to="/blood-pressure" className={navItemStyle}>
+        血壓紀錄
+      </NavLink>
+      <NavLink to="/blood-sugar" className={navItemStyle}>
+        血糖紀錄
+      </NavLink>
+      <NavLink to="/advice" className={navItemStyle}>
+        健康建議
+      </NavLink>
+    </div>
 
-      {/* 右上角顯示登入/登出 */}
-      <div className="flex items-center gap-4">
-        {user ? (
-          <>
-            <span className="text-gray-700">您好，{user.name}</span>
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 text-white px-3 py-1 rounded"
-            >
-              登出
-            </button>
-          </>
-        ) : (
-          <NavLink to="/login" className="text-blue-600 hover:underline">
-            登入
-          </NavLink>
-        )}
-      </div>
-    </nav>
+    {/* 右上角登入/登出 */}
+    <div className="flex items-center gap-4">
+      {user ? (
+        <>
+          <span className="text-gray-700">您好，{user.name}</span>
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 text-white px-3 py-1 rounded"
+          >
+            登出
+          </button>
+        </>
+      ) : (
+        <NavLink to="/login" className="text-blue-600 hover:underline">
+          登入
+        </NavLink>
+      )}
+    </div>
+  </div>
+</nav>
   );
 };
 

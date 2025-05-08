@@ -8,6 +8,7 @@ import WeightRecordPage from './pages/WeightRecordPage';
 import BPRecordPage from './pages/BPRecordPage';
 import SugarLogPage from './pages/SugarLogPage';
 import AdvicePage from './pages/AdvicePage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/blood-pressure" element={<BPRecordPage />} />
         <Route path="/blood-sugar" element={<SugarLogPage />} />
         <Route path="/advice" element={<AdvicePage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </>
     
